@@ -1,0 +1,36 @@
+<html>
+<div id="chartContainer">
+
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
+  <script type="text/javascript">
+
+    //var svg = dimple.newSvg("#chartContainer", 590, 400);
+
+          "use strict";
+          var margin = 75,
+              width = 1200 - margin,
+              height = 600 - margin;
+
+          
+          var svg = d3.select("body")
+            .append("svg")
+              .attr("width", width + margin)
+              .attr("height", height + margin)
+            .append('g')
+                .attr('class','chart');
+
+    d3.csv("prosperLoanData_cleanedsubset_summary.csv", function (data) {
+
+      var myChart = new dimple.chart(svg, data);
+      //myChart.setBounds(80, 30, 480, 330)
+      myChart.addPctAxis("y", "Total");
+      myChart.addCategoryAxis("x", ["ProsperScore", "IncomeRange_Mod"]);      
+      myChart.addSeries("LoanStatus_mod", dimple.plot.bar);
+       myChart.addLegend(600, 10, 380, 20, "right");
+      myChart.draw();
+    });
+
+  </script>
+</div>
+</html>
