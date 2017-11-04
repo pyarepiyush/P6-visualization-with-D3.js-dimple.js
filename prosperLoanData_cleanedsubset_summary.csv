@@ -1,4 +1,4 @@
-LoanStatus_mod,ProsperScore,IncomeRange_Mod,Total
+Loan-Status,Prosper-Score,Income-Range,Total
 Bad Loan,1,1) 0,4
 Completed,1,1) 0,1
 Current,1,1) 0,2
