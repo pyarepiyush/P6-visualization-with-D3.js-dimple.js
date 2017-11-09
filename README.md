@@ -8,7 +8,7 @@ This Project creates chart showing % of loan-status values by their Prosper scor
 It uses dimple.js for creating the main chart, and also uses D3 to set overall attributes.  This chart has interactive legend, which can be used to filter out loan-status values.
 
 Here is the screenshot of the viz:
-[Screenshot](Capture.PNG)
+![Screenshot](Capture.PNG)
 
 #### Design
 
